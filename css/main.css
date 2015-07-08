@@ -1,0 +1,33 @@
+body{font-family: serif}
+.intr{margin-top: 5px;} 
+.divleft{height: 400px}
+.divcenter{ height: 600px; overflow:auto}
+.divright{ height: 400px}
+.intrbtm{margin:  5px; padding: 3px}
+.brd{border: 1px solid blanchedalmond;}
+.brd1{border: 1px solid black; height:100px; width: 100px;margin-right:1px; margin-top: 1px}
+#DataTables_Table_0_paginate span{padding: 10px}
+#DataTables_Table_0_filter input,#login,#password{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border-collapse: collapse;
+    border: 1px solid cornflowerblue;
+    height: 30px;
+}
+#DataTables_Table_0_filter,#DataTables_Table_0_length{font-family: serif; size: 19px}
+
+#DataTables_Table_0_length select {
+    border: 1px solid cornflowerblue;            
+    -webkit-appearance: none;          
+    -moz-appearance: none;             
+    /*background: url('dropdown_arrow.png') no-repeat;*/          
+    background-position: 82px 7px;           
+    width: 60px;            
+    text-indent: 0.01px;        
+    text-overflow: ""; 
+    height: 28px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}

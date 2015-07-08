@@ -1,0 +1,52 @@
+<div class="container" >
+    
+    <div class="row  pad-top">
+
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <strong>   Registration Form </strong>  
+                </div>
+                <div class="panel-body" ng-controller="regController">
+                    <form role="form" name="form1">
+                        <br/>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-circle-o-notch" >FN</i></span>
+                            <input type="text" class="form-control" placeholder="First Name" required ng-model="user.first" />
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-circle-o-notch"  ></i></span>
+                            <input type="text" class="form-control" placeholder="Last Name" required ng-model="user.last"/>
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-tag"  ></i></span>
+                            <input type="text" class="form-control" placeholder="Phone"  ng-model="user.phone"/>
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"></span>
+                            <input type="text" class="form-control" placeholder="Cell" required ng-model="user.cellphone"/>
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon">@</span>
+                            <input type="text" class="form-control" placeholder="Email" id="email" required ng-model="user.email" ng-blur="validate(user)"/>
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <input type="text" class="form-control" placeholder="User name" required ng-model="user.username"/>
+                        </div>
+                        <div class="form-group input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <input type="text" class="form-control" placeholder="Password" required ng-model="user.pass"/>
+                        </div>
+                        <p><button class="btn btn-success" ng-disabled="form1.$invalid" type="submit" ng-click="adduser(user)">Submit</button> 
+                            <a href="#/partials/table" class="btn btn-primary">Home</a></p>
+                        <hr />
+                        <p style="color:red; font-weight: bold;">{{emval}}</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

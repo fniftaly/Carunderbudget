@@ -1,0 +1,77 @@
+<style>
+    select {
+        border: 1px solid cornflowerblue;            
+        -webkit-appearance: none;          
+        -moz-appearance: none;             
+        /*background: url('dropdown_arrow.png') no-repeat;*/          
+        background-position: 82px 7px;           
+        width: 60px;            
+        text-indent: 0.01px;        
+        text-overflow: ""; 
+        height: 28px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+    input,#login,#password{
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        border-collapse: collapse;
+        border: 1px solid cornflowerblue;
+        height: 30px;
+    }
+    /*img{width:80px; height: auto}*/
+    //style="width:80px; height:auto"
+    /*.dataTable td div{background-color: khaki}*/
+</style>
+<div class="container  intr">
+    <div class="row  intrbtm">
+        <ul class="list-inline">
+            <li style="color:white">CARUNDERBUDGET.COM</li>
+            <li class="btn btn-primary">Home</li>
+            <li class="btn btn-primary update" ng-click="count = count + 1" ng-init="count = 0">Update</li>
+            <li><a href="#/partials/dataupload" class="btn btn-primary">Upload</a></li>
+            <li><a href="#/partials/contactus" class="btn btn-primary">Contact Us</a></li>
+            <li></li><li></li><li></li>
+            <li><input type="text" id="login" name="login" placeholder="username"></li>
+            <li><input type="text" id="password" name="password" placeholder="password"></li>
+            <li class="btn btn-primary">Login</li>
+            <li><a href="#/partials/register" class="btn btn-primary">Register</a></li>
+
+        </ul>
+    </div>
+    <div class="row brd">
+        <div class="divleft col-xs-2">
+            <button class="btn">Advertising</button>{{count}}
+        </div>
+
+        <div class="divcenter col-xs-8" >
+
+            <div id="search-length" class="row intr" ></div> 
+
+            <table class="dataTable">
+
+                <tbody></tbody>
+
+            </table>
+
+            <!--            <ul class="list-inline" ng-controller="tablecrl">
+                            <li ng-repeat="img in imgs"><span class='img'><img src='{{img.obj1}}'/></span><span class='img'><img src='{{img.obj2}}'/></span><span class='img'><img src='{{img.obj3}}'/></span>
+                                <span class='img'><img src='{{img.obj4}}'/></span><span class='img'><img src='{{img.obj5}}'/>
+                                </span>                    
+                               <span class='img'><img src='{{img.obj6}}'/></span>
+                               <span class='img'><img src='{{img.obj7}}'/></span>
+                               <span class='img'><img src='{{img.obj8}}'/></span>
+                               <span class='img'><img src='{{img.obj9}}'/></span>
+                            </li>
+                        </ul>-->
+
+        </div>
+
+        <div class="divright col-xs-2">
+            <button class="btn">Advertising</button>
+        </div>
+    </div> 
+
+</div>
