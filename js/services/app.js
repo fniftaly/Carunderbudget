@@ -1,7 +1,7 @@
 
 'use strict';
 
-var carmodule = angular.module('carmodule', ['ngRoute']);
+var carmodule = angular.module('carmodule', ['ngRoute','angularFileUpload']);
 //
         carmodule.config(['$routeProvider', function ($routeProvider) {
 
