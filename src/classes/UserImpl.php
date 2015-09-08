@@ -39,10 +39,9 @@ class UserImpl implements CreateUser{
     public function verifyUser($userid) {
         if($userid){
             
-//            $query = sprintf("SELECT userid FROM user WHERE userid='%s'",
-//                    
-//            mysql_real_escape_string($userid));
-            $query = "SELECT userid FROM user WHERE userid='$userid'";
+            $query = sprintf("SELECT userid FROM user WHERE userid='%s'",
+                    
+            mysql_real_escape_string($userid));
             
             return $query;
         }
