@@ -9,4 +9,6 @@ interface CreateUser {
    public function updateUser($userid);
    
    public function deleteUser($userid);
+   
+   public function verifyUser($userid);
 }

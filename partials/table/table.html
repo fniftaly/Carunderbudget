@@ -21,22 +21,39 @@
         border: 1px solid cornflowerblue;
         height: 30px;
     }
-    /*img{width:80px; height: auto}*/
-    //style="width:80px; height:auto"
-    /*.dataTable td div{background-color: khaki}*/
+    ul li.dspl{display: none;}
+    /*.login, .ulogout{height: 34px}*/
 </style>
+<script>
+    function localStroagedata(){
+    
+    if(localStorage.getItem('user') === "validuser"){
+        
+      $('.dspl').css('display','inline');
+      
+      $('.login').css({'display':'none'});
+    }else{
+       $('.logout').css('display','none');
+}}
+localStroagedata();
+
+</script>
 <div class="container  intr">
-    <div class="row  intrbtm">
+    <div class="row  intrbtm" ng-controller="loginCtrl" style="background:lightgray">
         <ul class="list-inline">
-            <li style="color:white">CARUNDERBUDGET.COM</li>
+            <li style="color:white">$1Budget.com</li>
             <li class="btn btn-primary">Home</li>
-            <li class="btn btn-primary update" ng-click="count = count + 1" ng-init="count = 0">Update</li>
-            <li><a href="#/partials/dataupload" class="btn btn-primary">Upload</a></li>
+            
+            <li class="dspl" ng-style="{display:user.update}" ng-click="">
+             <a href="#/partials/dataupload" class="btn btn-primary">Update</a></li>
+            <li class="dspl" ng-style="{display:user.upload}"><a href="#/partials/dataupload" class="btn btn-primary">Upload</a></li>
             <li><a href="#/partials/contactus" class="btn btn-primary">Contact Us</a></li>
-            <li></li><li></li><li></li>
-            <li><input type="text" id="login" name="login" placeholder="username"></li>
-            <li><input type="text" id="password" name="password" placeholder="password"></li>
-            <li class="btn btn-primary">Login</li>
+            <li><input type="text" id="username" size="15" name="username" placeholder="username" ng-model="user.username"></li>
+            <li><input type="text" id="password" size="15" name="password" placeholder="password" ng-model="user.password"></li>
+            <li class="btn btn-primary login" ng-style="{display:user.udisplay}"  ng-click="login_valdiation(user)">Login</li>
+            
+            <li class="btn btn-primary logout" ng-style="{display:user.odisplay}" ng-click="user_stylereset(user)">Logout</li>
+            
             <li><a href="#/partials/register" class="btn btn-primary">Register</a></li>
 
         </ul>
@@ -55,22 +72,11 @@
                 <tbody></tbody>
 
             </table>
-
-            <!--            <ul class="list-inline" ng-controller="tablecrl">
-                            <li ng-repeat="img in imgs"><span class='img'><img src='{{img.obj1}}'/></span><span class='img'><img src='{{img.obj2}}'/></span><span class='img'><img src='{{img.obj3}}'/></span>
-                                <span class='img'><img src='{{img.obj4}}'/></span><span class='img'><img src='{{img.obj5}}'/>
-                                </span>                    
-                               <span class='img'><img src='{{img.obj6}}'/></span>
-                               <span class='img'><img src='{{img.obj7}}'/></span>
-                               <span class='img'><img src='{{img.obj8}}'/></span>
-                               <span class='img'><img src='{{img.obj9}}'/></span>
-                            </li>
-                        </ul>-->
-
         </div>
 
         <div class="divright col-xs-2">
             <button class="btn">Advertising</button>
+            <p>{{favoriteCookie}}</p>
         </div>
     </div> 
 

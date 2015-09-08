@@ -20,18 +20,19 @@
 <div class="row  pad-top">
 
     <div class="col-md-4 col-md-offset-4" ng-controller="uploadCtrl">
+        <p>  <a href="#/partials/table" class="btn btn-primary">Home</a></p>
         <form>
             <div style="text-align: left;font-size: 20px;padding: 10px;color: #487eaa;">
                 <font> Upload Images: 5 only allowed</font>
             </div>
             <div class="file-upload">
-                <input type="file" id="i_file" name="file[]" 
+                <input type="file" id="i_file" name="file[]" ng-model="upload.file"
                        ng-file-select="onFileSelect($files)" multiple class="form-control"/>
-                
+
                 <div ng-repeat="files in uploadResult">
-                    
-                    <span class='label label-info'>{{files.name}}</span><br/>
-                    
+
+                    <span class='label label-info'>{{files.name}} uploaded</span><br/>
+
                 </div>
             </div>
         </form>

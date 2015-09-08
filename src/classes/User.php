@@ -1,11 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of User
  *
@@ -17,24 +11,27 @@ class User {
 
     private $firstname;
     private $lastname;
-    private $cellphone;
-    private $homephone;
+    private $phone;
     private $email;
+    private $username;
+    private $password;
 
     public function __construct() {
     }
 
-   public function createuser($firstname, $lastname,$cellphone,$homephone,$email){
+   public function createuser($firstname, $lastname,$phone,$email,$username,$password){
        
        $this->firstname = $firstname;
        
        $this->lastname = $lastname;
        
-       $this->cellphone = $cellphone;
-       
-       $this->homephone = $homephone;
+       $this->phone = $phone;
        
        $this->email = $email;
+       
+       $this->username = $username;
+       
+       $this->password = $password;
        
        return $this;
    }
@@ -48,12 +45,8 @@ class User {
         return $this->lastname;
     }
 
-   public function getCellphone() {
-        return $this->cellphone;
-    }
-
-   public function getHomephone() {
-        return $this->homephone;
+   public function getPhone() {
+        return $this->phone;
     }
 
    public function getEmail() {
@@ -68,19 +61,31 @@ class User {
         $this->lastname = $lastname;
     }
 
-   public function setCellphone($cellphone) {
-        $this->cellphone = $cellphone;
-    }
-
-   public function setHomephone($homephone) {
-        $this->homephone = $homephone;
+   public function setPhone($phone) {
+        $this->phone = $phone;
     }
 
    public function setEmail($email) {
         $this->email = $email;
     }
 
-    public function __destruct() {
+    function getUsername() {
+        return $this->username;
+    }
+
+    function getPassword() {
+        return $this->password;
+    }
+
+    function setUsername($username) {
+        $this->username = $username;
+    }
+
+    function setPassword($password) {
+        $this->password = $password;
+    }
+
+        public function __destruct() {
         
         $this->firstname = null;
         

@@ -13,6 +13,7 @@ carmodule.controller('uploadCtrl', ['$scope', '$timeout', '$upload', function ($
                $f_count = 5; 
             }
             
+            if(upld < 5)
             for (var i = 0; i < $f_count; i++) {
                 
                 var $file = $files[i];
@@ -35,7 +36,9 @@ carmodule.controller('uploadCtrl', ['$scope', '$timeout', '$upload', function ($
 //                        console.log($scope.uploadResult);
                     });
                 });
+                upld++;
             }
+        
         };
     }]);
 
